@@ -4,7 +4,7 @@
 %%%CHANGES: 
 %%% Sander: July 23, Merged to work with EWA files
 
-clc
+%clc
 %clear all
 close all
 
