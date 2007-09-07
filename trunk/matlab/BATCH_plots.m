@@ -4,9 +4,7 @@
 %
 % 6 September 2007, Sander van der Hoog, (svdhoog@gmail.com)
 
-
 rho=1;delta=1;phi=0;beta=5.0;
-NrTotalDays=30;
 TOTNR_RUNS=5;
 
 for run_nr=1:TOTNR_RUNS
