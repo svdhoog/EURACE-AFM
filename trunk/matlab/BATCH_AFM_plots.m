@@ -60,7 +60,7 @@ marker_sz(4) = 8;
 
 
 IdxDividendsPaymentMonthlyDays_plot = ...
-    find((DividendsPaymentMonthlyDays>=t0)&(DividendsPaymentMonthlyDays<=tf));
+    find((DividendsPaymentMonthlyDays>=t0)&(DividendsPaymentMonthlyDays<=Tf));
 DividendsPaymentMonthlyDays_plot = DividendsPaymentMonthlyDays(IdxDividendsPaymentMonthlyDays_plot);
 
 
@@ -76,10 +76,16 @@ for i=1:NrAssets
     figure(i); hold on; grid on; box on;
     plot(prices(:,i),colore{1,1},'linewidth',line_width(1));
     axis tight; title('Prices');
+    filename=sprintf('./prices_asset%d', i);
+    disp(filename);
+    laprint(gcf,filename); 
 
     figure(NrAssets+i); hold on; grid on; box on;
     plot(returns(:,i),colore{1,1},'linewidth',line_width(1));
     axis tight; title('Returns');
+    filename=sprintf('./returns_asset%d', i);
+    disp(filename);
+    laprint(gcf,filename); 
 
 end;
 
@@ -91,8 +97,8 @@ for i=1:NrAssets
     disp(filename);
     laprint(gcf,filename); 
 
-    filename=sprintf('./returns_asset%d', i);
     figure(NrAssets+i); 
+    filename=sprintf('./returns_asset%d', i);
     disp(filename);
     laprint(gcf,filename); 
 end;

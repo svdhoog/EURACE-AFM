@@ -18,6 +18,7 @@ for ii =1:numel(PATHfiles)
     end
 end
 addpath(PATHDirs.name)
+addpath(pwd);
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Set testing mode:
@@ -26,11 +27,11 @@ global TESTMODE;
 TESTMODE=0; %testing OFF
 
 % Duration of the simulation
-NrMonths = 4;
-NrDaysInMonth = 5;
+NrMonths = 50;
+NrDaysInMonth = 10;
 
 % initialization
-NrMonthsInitialization = 2;
+NrMonthsInitialization = 24;
 NrDaysInitialization = NrMonthsInitialization*NrDaysInMonth;
 
 NrTotalMonths = NrMonths + NrMonthsInitialization;
@@ -51,9 +52,6 @@ global Parameters Noises
 global NrYears
 global Book
 
-%randn('seed',1234567);
-%rand('seed',1234567);
-
 %%%%  Government policy parameters %%%%%
 Parameters.GovernmentPolicy.LastWagePublicPensionSubstitutionRate = 0.75;
 Parameters.GovernmentPolicy.LaborTaxRate = 0.1;
@@ -61,8 +59,8 @@ Parameters.GovernmentPolicy.CapitalTaxRate = 0.1;
 %%%%  End of Government policy parameters %%%%%
 
 % Parameters of the Clearing Mechanism
-Parameters.ClearingMechanism = 'ClearingHouse';
-%Parameters.ClearingMechanism = 'LimitOrderBook';
+%Parameters.ClearingMechanism = 'ClearingHouse';
+Parameters.ClearingMechanism = 'LimitOrderBook';
 
 %%% Central Bank policy parameters %%%
 Parameters.CentralBankPolicy.RiskFreeRate = 0.01;

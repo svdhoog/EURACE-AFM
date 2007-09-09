@@ -5,12 +5,12 @@
 
 global BATCHMODE TOTNR_RUNS;
 BATCHMODE=1;    %Turn batch mode on/off;
-TOTNR_RUNS =10; %Nr. of random seeds to test
+
 
 %%% Households learning parameters set in : ./households/DBHouseholds_initialization.m %%%
 %Default:
 rho=1;delta=1;phi=0;beta=5.0;
-
+TOTNR_RUNS =2; %Nr. of run (for examplem random seeds to test)
 
 %for rho=0:1:1
 %    for delta=0:1:1
