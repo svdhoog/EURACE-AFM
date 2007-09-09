@@ -64,7 +64,7 @@ for n=1:NrSellers
 end
 
 %%%  Final check %%%
-if (abs(QBtot-QStot)>0.99)|(abs(QBtot-Qcross)>0.99)|(abs(QStot-Qcross)>0.99)
-    fprintf('\r\n QBtot: %d \t QStot: %d \t Qcross: %d',QBtot,QStot,Qcross)
-    error('Error in the transactions quantities')
-end
+%if (abs(QBtot-QStot)>0.99)|(abs(QBtot-Qcross)>0.99)|(abs(QStot-Qcross)>0.99)
+%    fprintf('\r\n QBtot: %d \t QStot: %d \t Qcross: %d',QBtot,QStot,Qcross)
+%    error('Error in the transactions quantities')
+%end
