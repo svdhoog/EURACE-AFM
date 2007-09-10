@@ -19,7 +19,7 @@ addpath(PATHDirs.name)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 LoadingDay = NrDaysInitialization; %240; %NrDaysInitialization;
-SavingStep = NrTotalDays; %340; %NrTotalDays;
+SavingStep = NrTotalDays+1; %340; %NrTotalDays;
 %%%%%%%%%%%%%%%%%%%%%%%%
 
 global Parameters

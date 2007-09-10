@@ -27,7 +27,7 @@ global TESTMODE;
 TESTMODE=0; %testing OFF
 
 % Duration of the simulation
-NrMonths = 50;
+NrMonths = 200;
 NrDaysInMonth = 10;
 
 % initialization
@@ -38,7 +38,7 @@ NrTotalMonths = NrMonths + NrMonthsInitialization;
 NrTotalDays = NrTotalMonths*NrDaysInMonth;
 
 NrHouseholds = 200;
-NrFirms = 2;
+NrFirms = 10;
 
 global DBFirms DBFinancialAssets DBHouseholds DBAMCs
 global DBPortfolioAllocationRulesHouseholds DBPortfolioAllocationRulesAMCs 
@@ -59,8 +59,8 @@ Parameters.GovernmentPolicy.CapitalTaxRate = 0.1;
 %%%%  End of Government policy parameters %%%%%
 
 % Parameters of the Clearing Mechanism
-%Parameters.ClearingMechanism = 'ClearingHouse';
-Parameters.ClearingMechanism = 'LimitOrderBook';
+Parameters.ClearingMechanism = 'ClearingHouse';
+%Parameters.ClearingMechanism = 'LimitOrderBook';
 
 %%% Central Bank policy parameters %%%
 Parameters.CentralBankPolicy.RiskFreeRate = 0.01;
