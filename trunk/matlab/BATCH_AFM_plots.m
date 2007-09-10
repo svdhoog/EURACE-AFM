@@ -96,11 +96,6 @@ for i=1:NrAssets
     filename=sprintf('./prices_asset%d', i);
     disp(filename);
     laprint(gcf,filename); 
-
-    figure(NrAssets+i); 
-    filename=sprintf('./returns_asset%d', i);
-    disp(filename);
-    laprint(gcf,filename); 
 end;
 close all;
 end;
