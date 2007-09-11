@@ -18,7 +18,15 @@ for ii =1:numel(PATHfiles)
     end
 end
 addpath(PATHDirs.name)
+
+%A quick hack to get the utilities directory full pathname:
 addpath(pwd);
+cd('utilities');
+addpath(pwd);
+cd('..');
+cd('ewa');
+addpath(pwd);
+cd('..');
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Set testing mode:

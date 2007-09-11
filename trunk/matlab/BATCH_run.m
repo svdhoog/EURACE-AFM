@@ -17,7 +17,7 @@ TOTNR_RUNS =5; %Nr. of run (for example random seeds to test)
 %%    for delta=0:1:1
 %%        for phi=0:1:1
         
-        for run_nr=1:TOTNR_RUNS
+        for run_nr=2:TOTNR_RUNS
             Parameters.Households.EWA_learning.rho=rho;
             Parameters.Households.EWA_learning.delta=delta;
             Parameters.Households.EWA_learning.phi=phi;
@@ -29,7 +29,7 @@ TOTNR_RUNS =5; %Nr. of run (for example random seeds to test)
              rand('state',sum(100*clock));  %uses Matlab 5 RNG, varying random seed, uniformly distributed
 
             AFM_initialization;
-%            AFM_simulation;
+            AFM_simulation;
 
             %Creating directory to store output
             directory=sprintf('./ewa/[rho=%d,delta=%d,phi=%d]/%s/run%d',rho,delta,phi, Parameters.ClearingMechanism, run_nr);
@@ -38,8 +38,8 @@ TOTNR_RUNS =5; %Nr. of run (for example random seeds to test)
             
             %Saving database to output directory
             fprintf('\r\r Final saving\r')
-%            filename = sprintf('%s/AFM_t%s_rnd%d.mat', directory, num2str(Parameters.current_day), run_nr);
-%            save(filename);
+            filename = sprintf('%s/AFM_t%s_rnd%d.mat', directory, num2str(Parameters.current_day), run_nr);
+            save(filename);
 
          end   
             

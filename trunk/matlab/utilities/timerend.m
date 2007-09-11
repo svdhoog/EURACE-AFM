@@ -3,7 +3,7 @@
 
 past  = etime(clock,timestart);
 
-filename=sprintf('../log/matlab.log');
+filename=sprintf('../log/matlab-3.log');
 SIMLOGFILE = fopen(filename,'a');
 
 fprintf(SIMLOGFILE,'Simulation finished on %s\n', DATESTR(NOW));

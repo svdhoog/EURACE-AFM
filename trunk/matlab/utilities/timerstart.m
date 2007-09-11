@@ -5,7 +5,7 @@
 timestart=clock;
 
 %filename=sprintf('../log/matlab-%02d%02d%4d-%02d%02d%02.f.log',timestart(2),timestart(3),timestart(1),timestart(4),timestart(5),timestart(6));
-filename=sprintf('../log/matlab.log');
+filename=sprintf('../log/matlab-3.log');
 SIMLOGFILE = fopen(filename,'a');
 
 fprintf(SIMLOGFILE,'\n===========================================================================================================\n');

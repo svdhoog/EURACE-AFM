@@ -27,9 +27,15 @@ for run_nr=2:TOTNR_RUNS
 %    fprintf('Directory variable: %s\n', directory);
 
     fprintf('Plotting\n');
+
+%This only works if the PATH is set correctly to subdirectories with full path listing
     run('BATCH_AFM_plots');
     run('plot_EWA_rules');
-    
+
+%This is a quick hack to run the script BATCH_AFM_plots from the local directory
+%    run('../../../../BATCH_AFM_plots');
+
+    close all;
     fprintf('Exiting from: %s\n', directory);
-    cd('../../../../');
+    cd('../../../..');
 end; 

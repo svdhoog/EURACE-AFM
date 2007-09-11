@@ -10,7 +10,7 @@ done = t-LoadingDay;
 todo= Parameters.NrTotalDays-LoadingDay; %=total-done;
 counter=done/todo;
 
-filename=sprintf('../log/matlab.log');
+filename=sprintf('../log/matlab-3.log');
 SIMLOGFILE = fopen(filename,'a');
 
    past  = etime(clock,timestart);
