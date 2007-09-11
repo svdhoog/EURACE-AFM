@@ -4,11 +4,11 @@
 %
 % 6 September 2007, Sander van der Hoog, (svdhoog@gmail.com)
 
-rho=1;delta=1;phi=0;
+rho=1;delta=0;phi=0;
 beta=5.0;
-TOTNR_RUNS=2;
+TOTNR_RUNS=5;
 
-for run_nr=2:TOTNR_RUNS
+for run_nr=3:TOTNR_RUNS
     fprintf('Loading random seed: %d\n', run_nr);
     directory=sprintf('./ewa/[rho=%d,delta=%d,phi=%d]/%s/run%d',rho,delta,phi, Parameters.ClearingMechanism, run_nr);
     addpath(directory);
@@ -28,14 +28,11 @@ for run_nr=2:TOTNR_RUNS
 
     fprintf('Plotting\n');
 
-%This only works if the PATH is set correctly to subdirectories with full path listing
-    run('BATCH_AFM_plots');
-    run('plot_EWA_rules');
-
-%This is a quick hack to run the script BATCH_AFM_plots from the local directory
-%    run('../../../../BATCH_AFM_plots');
+%This works if the PATH is set correctly to subdirectories with full path listing
+    BATCH_AFM_plots;
+    plot_EWA_rules;
 
     close all;
     fprintf('Exiting from: %s\n', directory);
-    cd('../../../..');
+    cd(BASE);
 end; 
