@@ -8,25 +8,22 @@
 %clear all
 close all
 
-% Set the AFM path
+%Set the BASE dir:
+addpath(pwd);
+BASE=pwd;
+
+% Set the AFM path to all subdirs:
 PATHfiles = dir;
 jj = 0;
 for ii =1:numel(PATHfiles)
     if PATHfiles(ii).isdir==1
         jj=jj+1;
-    PATHDirs(jj).name = PATHfiles(ii).name;
+%%    PATHDirs(jj).name = PATHfiles(ii).name;
+    path=sprintf('%s/%s', BASE, PATHfiles(ii).name);
+    PATHDirs(jj).name = path;
     end
 end
 addpath(PATHDirs.name)
-
-%A quick hack to get the utilities directory full pathname:
-addpath(pwd);
-cd('utilities');
-addpath(pwd);
-cd('..');
-cd('ewa');
-addpath(pwd);
-cd('..');
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Set testing mode:
