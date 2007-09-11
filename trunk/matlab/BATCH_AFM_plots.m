@@ -79,13 +79,15 @@ for i=1:NrAssets
     filename=sprintf('./prices_asset%d', i);
     disp(filename);
     laprint(gcf,filename); 
-
+%    print(gcf, '-deps', filename); 
+    
     figure(NrAssets+i); hold on; grid on; box on;
     plot(returns(:,i),colore{1,1},'linewidth',line_width(1));
     axis tight; title('Returns');
     filename=sprintf('./returns_asset%d', i);
     disp(filename);
     laprint(gcf,filename); 
+%    print(gcf, '-deps', filename); 
 
 end;
 
@@ -96,6 +98,7 @@ for i=1:NrAssets
     filename=sprintf('./prices_asset%d', i);
     disp(filename);
     laprint(gcf,filename); 
+%    print(gcf, '-deps', filename); 
 end;
 close all;
 end;

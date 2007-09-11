@@ -4,12 +4,13 @@
 %
 % 6 September 2007, Sander van der Hoog, (svdhoog@gmail.com)
 
-rho=1;delta=1;phi=0;beta=5.0;
-%TOTNR_RUNS=1;
+rho=1;delta=1;phi=0;
+beta=5.0;
+TOTNR_RUNS=2;
 
-for run_nr=1:TOTNR_RUNS
+for run_nr=2:TOTNR_RUNS
     fprintf('Loading random seed: %d\n', run_nr);
-    directory=sprintf('./ewa/[rho=%d,delta=%d,phi=%d]/run%d',rho,delta,phi, run_nr);
+    directory=sprintf('./ewa/[rho=%d,delta=%d,phi=%d]/%s/run%d',rho,delta,phi, Parameters.ClearingMechanism, run_nr);
     addpath(directory);
 
     fprintf('Entering into: %s\n', directory);
@@ -26,9 +27,9 @@ for run_nr=1:TOTNR_RUNS
 %    fprintf('Directory variable: %s\n', directory);
 
     fprintf('Plotting\n');
-    %run('../../../BATCH_AFM_plots');
     run('BATCH_AFM_plots');
-
+    run('plot_EWA_rules');
+    
     fprintf('Exiting from: %s\n', directory);
-    cd('../../../');
+    cd('../../../../');
 end; 

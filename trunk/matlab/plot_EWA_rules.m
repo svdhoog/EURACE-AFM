@@ -1,10 +1,10 @@
 %SCRIPT plot_EWA_rules
-%Script to print data related to rules: usage count, performance
+%Script to %print data related to rules: usage count, performance
 %All plotting occurs to the local directory
 
 clc
 close all
-cd(directory);
+%cd(directory);
 
 h=0;
 
@@ -15,6 +15,7 @@ axis tight, xlabel('time (days)'), ylabel('user count');
 filename=sprintf('./PortfolioAllocationRulesHousehold_utilization_array');
 disp(filename);
 laprint(gcf,filename); 
+%print(gcf, '-deps', filename); 
 
 h=h+1;
 figure(h);
@@ -23,6 +24,7 @@ axis tight, xlabel('time (days)'), ylabel('performance');
 filename=sprintf('./PortfolioAllocationRulesHousehold_performance_array');
 disp(filename);
 laprint(gcf,filename); 
+%print(gcf, '-deps', filename); 
 
 h=h+1;
 figure(h);
@@ -31,6 +33,7 @@ axis tight, xlabel('time (days)'), ylabel('user count');
 filename=sprintf('./PortfolioAllocationRulesAMC_utilization_array');
 disp(filename);
 laprint(gcf,filename); 
+%print(gcf, '-deps', filename); 
 
 h=h+1;
 figure(h);
@@ -39,6 +42,7 @@ axis tight, xlabel('time (days)'), ylabel('performance');
 filename=sprintf('./PortfolioAllocationRulesAMC_performance_array');
 disp(filename);
 laprint(gcf,filename); 
+%print(gcf, '-deps', filename); 
 
 close all
-cd('../../..');
+%cd('../../../..');
