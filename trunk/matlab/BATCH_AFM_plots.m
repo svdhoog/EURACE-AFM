@@ -100,6 +100,7 @@ for i=1:NrAssets
     laprint(gcf,filename); 
 %    print(gcf, '-deps', filename); 
 end;
+
 close all;
 end;
 
