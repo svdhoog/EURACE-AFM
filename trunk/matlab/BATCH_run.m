@@ -11,13 +11,13 @@ BATCHMODE=1;    %Turn batch mode on/off;
 %Default:
 rho=1;delta=1;phi=0;
 beta=5.0;
-TOTNR_RUNS =5; %Nr. of run (for example random seeds to test)
+TOTNR_RUNS =2; %Nr. of run (for example random seeds to test)
 
 %for rho=0:1:1
-%%    for delta=0:1:1
-%%        for phi=0:1:1
+    for delta=1:1:1
+        for phi=0:1:1
         
-        for run_nr=2:TOTNR_RUNS
+        for run_nr=1:TOTNR_RUNS
             Parameters.Households.EWA_learning.rho=rho;
             Parameters.Households.EWA_learning.delta=delta;
             Parameters.Households.EWA_learning.phi=phi;
@@ -43,6 +43,6 @@ TOTNR_RUNS =5; %Nr. of run (for example random seeds to test)
 
          end   
             
-%%        end;
-%%    end;
+        end;
+    end;
 %end;
