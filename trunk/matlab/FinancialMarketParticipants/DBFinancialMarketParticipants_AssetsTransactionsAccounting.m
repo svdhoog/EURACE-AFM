@@ -35,11 +35,11 @@ for n=1:NrBuyers
         FinancialMarketParticipant.portfolio.transactions_accounting(t) - Pcross*deltaQ;
     FinancialMarketParticipant.pending_orders.(AssetId).q = FinancialMarketParticipant.pending_orders.(AssetId).q - deltaQ;
     if FinancialMarketParticipant.pending_orders.(AssetId).q<0
+        fprintf('FinancialMarketParticipant.pending_orders.(AssetId).q = %f', FinancialMarketParticipant.pending_orders.(AssetId).q);
         error('The quantity of a pending buying order is less than zero')
     end
     DBFinancialMarketParticipants.(id) = FinancialMarketParticipant;
-    
-    
+
     clear id FinancialMarketParticipant deltaQ v OldQty
 end
 
@@ -55,12 +55,12 @@ for n=1:NrSellers
         FinancialMarketParticipant.portfolio.transactions_accounting(t) + Pcross*deltaQ;
     FinancialMarketParticipant.pending_orders.(AssetId).q = FinancialMarketParticipant.pending_orders.(AssetId).q + deltaQ;
     if FinancialMarketParticipant.pending_orders.(AssetId).q>0
+        fprintf('FinancialMarketParticipant.pending_orders.(AssetId).q = %f', FinancialMarketParticipant.pending_orders.(AssetId).q);
         error('The quantity of a pending selling order is greater than zero')
     end
     DBFinancialMarketParticipants.(id) = FinancialMarketParticipant;
 
     clear id FinancialMarketParticipant deltaQ v OldQty
-
 end
 
 %%%  Final check %%%
