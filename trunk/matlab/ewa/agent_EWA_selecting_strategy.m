@@ -59,16 +59,16 @@ if (0<=u & u<cpdf(1))
     nr_selected_rule=1;
 end;
 
-%Case 2: Now travers the cpdf until u > F(j-1)
+%Case 2: Now travers the cpdf until u > F(j-1): F(j-1)<= u < F(j) 
 for j=2:numel(cpdf)
-    if (cpdf(j-1)<u & u<cpdf(j))
+    if (cpdf(j-1)<= u & u<cpdf(j))
         nr_selected_rule=j;
         break;
     end;
 end;
 
-%Case 3: u>F(J)
-if (cpdf(end)<u)
+%Case 3: F(J)<= u
+if (cpdf(end)<= u)
     nr_selected_rule=numel(cpdf);
 end;
 
