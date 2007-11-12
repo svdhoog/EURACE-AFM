@@ -64,8 +64,8 @@ Parameters.GovernmentPolicy.CapitalTaxRate = 0.1;
 %%%%  End of Government policy parameters %%%%%
 
 % Parameters of the Clearing Mechanism
-Parameters.ClearingMechanism = 'ClearingHouse';
-%Parameters.ClearingMechanism = 'LimitOrderBook';
+%Parameters.ClearingMechanism = 'ClearingHouse';
+Parameters.ClearingMechanism = 'LimitOrderBook';
 
 %%% Central Bank policy parameters %%%
 Parameters.CentralBankPolicy.RiskFreeRate = 0.01;
