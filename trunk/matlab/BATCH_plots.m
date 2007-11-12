@@ -4,11 +4,11 @@
 %
 % 6 September 2007, Sander van der Hoog, (svdhoog@gmail.com)
 
-rho=1;delta=0;phi=0;
+rho=1;delta=1;phi=1;
 beta=5.0;
 TOTNR_RUNS=5;
 
-for run_nr=3:TOTNR_RUNS
+for run_nr=1:TOTNR_RUNS
     fprintf('Loading random seed: %d\n', run_nr);
     directory=sprintf('./ewa/[rho=%d,delta=%d,phi=%d]/%s/run%d',rho,delta,phi, Parameters.ClearingMechanism, run_nr);
     addpath(directory);
